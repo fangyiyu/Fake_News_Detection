@@ -10,8 +10,8 @@ app = Flask(__name__)
 ps = PorterStemmer()
 nltk.data.path.append('./nltk_data')
 
-model = pickle.load(open('model.pkl', 'rb'))
-tfidfvect = pickle.load(open('tfidfvect.pkl', 'rb'))
+model = pickle.load(open('model2.pkl', 'rb'))
+tfidfvect = pickle.load(open('tfidfvect2.pkl', 'rb'))
 
 @app.route('/', methods=['GET'])
 def home():
