@@ -8,7 +8,6 @@ from nltk.stem.porter import PorterStemmer
 
 app = Flask(__name__)
 ps = PorterStemmer()
-nltk.data.path.append('./nltk_data')
 
 model = pickle.load(open('model2.pkl', 'rb'))
 tfidfvect = pickle.load(open('tfidfvect2.pkl', 'rb'))
