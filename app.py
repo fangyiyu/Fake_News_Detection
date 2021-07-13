@@ -15,7 +15,9 @@ tfidfvect = pickle.load(open('tfidfvect.pkl2', 'rb'))
 def home():
     return render_template('index.html')
 
-def predict(text):
+@app.route('/', methods=['POST'])
+def predict():
+    text = request.form['text']
     review = re.sub('[^a-zA-Z]', ' ', text)
     review = review.lower()
     review = review.split()
@@ -23,15 +25,7 @@ def predict(text):
     review = ' '.join(review)
     review_vect = tfidfvect.transform([review]).toarray()
     prediction = 'FAKE' if model.predict(review_vect) == 0 else 'REAL'
-    return prediction
-
-@app.route('/', methods=['POST'])
-def webapp():
-    text = request.form['text']
-    prediction = predict(text)
     return render_template('index.html', text=text, result=prediction)
-
-
 
 if __name__ == "__main__":
     app.run()
