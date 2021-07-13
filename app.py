@@ -8,8 +8,8 @@ from nltk.stem.porter import PorterStemmer
 app = Flask(__name__)
 ps = PorterStemmer()
 
-model = pickle.load(open('model.pkl', 'rb'))
-tfidfvect = pickle.load(open('tfidfvect.pkl', 'rb'))
+model = pickle.load(open('model2.pkl', 'rb'))
+tfidfvect = pickle.load(open('tfidfvect.pkl2', 'rb'))
 
 @app.route('/', methods=['GET'])
 def home():
