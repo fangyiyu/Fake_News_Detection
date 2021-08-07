@@ -1,5 +1,2 @@
-# Fake_News_Detection_Flask
-A flask-based web application for detecting fake news from real ones utilizing Natural Language Processing.
-
-The app is deployed on Heroku, with [link](https://fakenewsdetectorflask.herokuapp.com/).  
-Feel free to use the API I published on [RapidAPI](https://rapidapi.com/fangyiyu/api/fake-news-detection1/).
+# FakeNewsDetection
+Fake news detection using Django. It is able to run locally, I tried to deploy on Heroku, but Heroku cannot recognize numpy from requirements.txt, and failed to building wheels for scikit-learn. 
