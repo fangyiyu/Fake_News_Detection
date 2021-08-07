@@ -1,2 +1,2 @@
 # FakeNewsDetection
-The same web app with the main branch using Django for deployment.
+The same web app with the main branch using Django for development.
